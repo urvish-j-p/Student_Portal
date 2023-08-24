@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux'
 import {Link,useHistory} from 'react-router-dom'
 import {loginUser} from '../actions/user_action'
 import {userType} from "../Utills/index"
-import backg from "../Images/backg.jpg"
-import StudentIMage from "../Images/student4.jpg"
-import AdminIMage from "../Images/admin2.jpg"
-import TeacherImage from "../Images/backgg.JPG"
+import backg from "../Images/ec_bg.jpg"
+import StudentIMage from "../Images/student_icon2.jpg"
+import AdminIMage from "../Images/admin_icon2.png"
+import TeacherImage from "../Images/teacher_icon.png"
 
 const SignIn  = ()=>{
     const history = useHistory()
@@ -27,7 +27,7 @@ const SignIn  = ()=>{
         }
         if(history.location.pathname == "/teclogin"){
           const datat = {
-            password,empolyee_id:email
+            password,email:email
             
         }
           dispatch(loginUser(datat,"Teacher"))
@@ -40,7 +40,7 @@ const SignIn  = ()=>{
 
    return (
       <div  style={{ backgroundImage:`url(${backg})`,
-      backgroundRepeat:"no", height:"880px",paddingTop:"100px" }}>
+      backgroundSize:"cover", height:"780px",paddingTop:"100px" }}>
         <div className='col-6' style={{margin:"auto"}}>
           <div className="card px-5 py-2" style={{margin:"3%"}}>
             <Link to="/landing"><i className="far fa-arrow-square-left fa-2x"></i></Link>

@@ -44,14 +44,14 @@ const Profile = () => {
                 <ul style={{listStyleType:"none" }}>
                   <li><Link to={`/student/dashboard`} className="link_class"><i className="fas fa-user-circle"></i> Profile</Link> <hr /></li>
                   <li><Link to={`/student/dashboard/attendance`} className="link_class"><i className="fas fa-calendar-plus"></i> Attendance</Link><hr /></li>
-                  <li><Link  to={`/student/dashboard/timetable`}className="link_class" ><i className="fal fa-table"></i> TimeTable</Link><hr /></li>
+                  {/* <li><Link  to={`/student/dashboard/timetable`}className="link_class" ><i className="fal fa-table"></i> TimeTable</Link><hr /></li> */}
                   <li><Link  to={`/student/dashboard/mark`}className="link_class" ><i className="fas fa-poll-people"></i> Result</Link><hr /></li>
-                  <li><Link to={`/student/dashboard/subject`} className="link_class"><i className="fad fa-books"></i> Subject</Link><hr /></li> 
-                  <li> <Link to={`/student/dashboard/joinclub`} className="link_class"><i className="fab fa-gg-circle"></i> Join Club</Link> <hr /></li>
-                  <li><Link to={`/student/dashboard/report`} className="link_class"><i className="fal fa-bug"></i> Complain</Link><hr /></li>
-                  <li><Link to={`/student/dashboard/notice`} className="link_class"><i className="fas fa-exclamation-square"></i> Notice</Link><hr /></li> 
-                  <li><Link to={`/student/dashboard/payment`} className="link_class"><i className="fab fa-amazon-pay"></i> Payment</Link><hr /></li>
-                  <li onClick={() => dispatch(logoutUser())} className="link_class"> <i className="fad fa-sign-out"></i> Logout<hr /></li>
+                  {/* <li><Link to={`/student/dashboard/subject`} className="link_class"><i className="fad fa-books"></i> Subject</Link><hr /></li>  */}
+                  {/* <li> <Link to={`/student/dashboard/joinclub`} className="link_class"><i className="fab fa-gg-circle"></i> Join Club</Link> <hr /></li> */}
+                  {/* <li><Link to={`/student/dashboard/report`} className="link_class"><i className="fal fa-bug"></i> Complain</Link><hr /></li> */}
+                  {/* <li><Link to={`/student/dashboard/notice`} className="link_class"><i className="fas fa-exclamation-square"></i> Notice</Link><hr /></li>  */}
+                  {/* <li><Link to={`/student/dashboard/payment`} className="link_class"><i className="fab fa-amazon-pay"></i> Payment</Link><hr /></li> */}
+                  <li onClick={() => dispatch(logoutUser())} className="link_class" style={{cursor:"pointer"}}> <i className="fas fa-sign-out"></i> Logout<hr /></li>
                 </ul>
                    
 

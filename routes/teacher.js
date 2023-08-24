@@ -62,14 +62,14 @@ router.post('/teachReg',(req,res)=>{
 
 
 router.post('/TecSign',(req,res)=>{
-  const {empolyee_id,password} = req.body
+  const {email,password} = req.body
 
   console.log(req.body)
  
-  if(!empolyee_id || !password){
+  if(!email || !password){
      return res.status(422).json({error:"please add email or password"})
   }
-  Teacher.findOne({empolyee_id:empolyee_id})
+  Teacher.findOne({email:email})
   .then(savedUser=>{
       if(!savedUser){
          return res.status(422).json({error:"Invalid Email or password"})

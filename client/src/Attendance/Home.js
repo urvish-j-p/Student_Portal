@@ -40,24 +40,33 @@ const Home = () => {
         dispatch(getStudentByClass(obj));
     }
     const students=useSelector(state=>state.getStuByClassReducer)
-     let classNum = [6,7,8,9,10]
+     let classNum = [1,2,3,4,5,6,7,8]
 
     return (
         <div style={{display:"flex"}}>
            <div style={{height:"880px",background:"gray",width:"13%",paddingLeft:"10px"}}>
            <div>
-           <Link to={`/teacher/dashboard`} className="link_class"> <i className="fas fa-exclamation-square"></i> Profile</Link>
+           <Link to={`/teacher/dashboard`} className="link_class"> <i className="fas fa-exclamation-square"></i>
+           <div>
+            Profile
+           </div>
+            </Link>
            <hr style={{color:"black"}} />
             </div>
            <div>
                 <p  onClick={() => setCshow(!cshow)} style={{fontSize:"20px",color:"white"}}> 
-                <i className="fas fa-user-friends"/> Make Attendance</p>
+                <i className="fas fa-user-friends"/> 
+                <div style={{cursor:"pointer"}}>
+
+                Make Attendance
+                </div>
+                </p>
                 {cshow && (
                     <ul style={{listStyleType:"none" }}>
                     {classNum.map(item =>(
                         <>
                       <li key={item} onClick={()=> handleClick(item)} style={{color:"white",fontSize:"20px",height:"30px",textDecoration:"none"}}>
-                        <Link to={`/teacher/dashboard/attendance/${item}`} style={{color:"white",fontSize:"20px",height:"30px",textDecoration:"none"}}>Class {item}</Link></li>
+                        <Link to={`/teacher/dashboard/attendance/${item}`} style={{color:"white",fontSize:"20px",height:"30px",textDecoration:"none"}}>Sem {item}</Link></li>
                       <hr style={{color:"black"}} />
                       </>
                     ))}
@@ -67,7 +76,14 @@ const Home = () => {
                 <hr />
             </div>
             <div>
-                <p  onClick={()=> setMshow(!mshow)} style={{fontSize:"20px",color:"white"}}>  <i className="fas fa-user-crown"></i>Upload Mark</p>
+                <p  onClick={()=> setMshow(!mshow)} style={{fontSize:"20px",color:"white"}}>  <i className="fas fa-user-crown"></i>
+                
+                <div style={{cursor:"pointer"}}>
+
+                  Upload Mark
+                </div>
+                
+                </p>
                 {mshow && (
                     <ul style={{listStyleType:"none" }}>
                     {classNum.map(item =>(
@@ -83,17 +99,24 @@ const Home = () => {
                 )}
                 <hr />
             </div>
-            <div>
+            {/* <div>
                 <p style={{fontSize:"20px",color:"white"}}> 
                  <Link to={`/teacher/dashboard/notice`} className="link_class"> <i className="fas fa-exclamation-square"></i> Notice</Link></p>
                  <hr style={{color:"black"}} />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <p style={{fontSize:"20px",color:"white"}}>    <Link to={`/teacher/dashboard/report`} className="link_class"><i className="fal fa-bug"></i> Complain</Link></p>
               <hr style={{color:"black"}} />
-            </div>
+            </div> */}
             <div>
-                <p style={{fontSize:"20px",color:"white"}}> <i className="fas fa-exclamation-square"  onClick={() => dispatch(logoutUser())}></i> Logout</p>
+                <p style={{fontSize:"20px",color:"white"}}> <i className="fas fa-exclamation-square"  ></i> 
+                <div style={{cursor:"pointer"}} onClick={() => dispatch(logoutUser())}>
+
+                Logout
+
+                </div>
+                
+                </p>
             </div>
            </div>
            <div style={{flex:1}}>

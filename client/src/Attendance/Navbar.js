@@ -19,7 +19,7 @@ const NavBar = ()=>{
            
            <div >
            <Link to={""} className="brand-logo center" 
-          style={{color:"white",fontSize:"30px",textDecoration:"none",fontFamily:"Acme"}}>Student Portal</Link>
+          style={{color:"white",fontSize:"30px",textDecoration:"none",fontFamily:"Acme",marginLeft:"20px"}}>Student Portal</Link>
            </div>
            {/* <div style={{marginLeft:"60px"}}>
                 {currentUser !== null && <><button  onClick={()=> logoutUserProfile()} >logout</button></>}
