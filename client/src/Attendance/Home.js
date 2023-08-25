@@ -44,7 +44,7 @@ const Home = () => {
 
     return (
         <div style={{display:"flex"}}>
-           <div style={{height:"880px",background:"gray",width:"13%",paddingLeft:"10px"}}>
+           <div style={{height:"100%",background:"gray",width:"15%",paddingLeft:"10px"}}>
            <div>
            <Link to={`/teacher/dashboard`} className="link_class"> <i className="fas fa-exclamation-square"></i>
            <div>
@@ -90,7 +90,7 @@ const Home = () => {
                         <>
                       <li key={item} onClick={()=> handleClick(item)} >
                         
-                        <Link to={`/teacher/dashboard/mark/${item}`}  style={{color:"white",fontSize:"20px",height:"30px",textDecoration:"none"}}>Class {item}</Link></li>
+                        <Link to={`/teacher/dashboard/mark/${item}`}  style={{color:"white",fontSize:"20px",height:"30px",textDecoration:"none"}}>Sem {item}</Link></li>
                       <hr style={{color:"black"}} />
                       </>
                     ))}

@@ -48,7 +48,7 @@ const Tprofile = ({user}) => {
       };
     
     return (
-        <div className='card' style={{width:"40%",margin:"auto"}}>
+        <div className='card' style={{width:"50%",margin:"15px auto"}}>
             {user && <>
                 <div >
                     <div style={{marginLeft:"34%",marginBottom:"20px"}}>
