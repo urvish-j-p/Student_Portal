@@ -17,6 +17,8 @@ const AddClub = () => {
 
         dispatch(addClubAction(data))          
 
+        setTitle("")
+        setContent("")
 
     }
 

@@ -34,6 +34,22 @@ const TeacherSignUp  = ()=>{
         }
   
        dispatch(registerTeacher(user))
+
+        setName("")
+        setSurName("")
+        setQulification("")
+        setDob("")
+        setAge("")
+        setGender("")
+        setTeachArea("")
+        setAddYear("")
+        setPasword("")
+        setEmail("")
+        setRoll_No("")
+        setMobile("")
+        setAddress("")
+        setSelectedOption("")
+
     }
 
    return (

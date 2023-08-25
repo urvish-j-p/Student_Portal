@@ -22,6 +22,8 @@ const StuList = ({students,sClass,mark}) => {
   };
 
     const dispatch=useDispatch()
+
+   
  
     console.log(id)
 
@@ -39,6 +41,10 @@ const handleRequest = ()=> {
    dispatch(uploadStuMark(another,obj))
    dispatch(getStudentByClass(another));
    setShow(false)
+
+   setSem("")
+   setSubject("")
+   setMark("")
 }
 
  var ans,curDate;

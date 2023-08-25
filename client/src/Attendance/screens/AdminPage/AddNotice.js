@@ -17,6 +17,8 @@ const AddNotice = () => {
 
         dispatch(addNoticeAction(data))          
 
+        setTitle("")
+        setContent("")
 
     }
 

@@ -23,6 +23,11 @@ const AddSubject = () => {
 
             dispatch(addSubjectAction(data))
 
+            setsName("")
+            setsCode("")
+            setsClass("")
+            setsCredit("")
+            setSelectedOption("")
 
     }
 
