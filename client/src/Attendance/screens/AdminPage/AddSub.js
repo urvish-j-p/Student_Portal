@@ -59,7 +59,7 @@ const AddSubject = () => {
           <br />
           <div className="row">
             <div className="col" style={{display:"flex",}}>
-            <p style={{ marginRight:"10px",fontSize:"20px" }}>Class:</p>
+            <p style={{ marginRight:"10px",fontSize:"20px" }}>Semester:</p>
                  <select value={sClass} id="selectId"  onChange={e => setsClass(e.target.value)}>
                  
                  {CName.map((item) => (

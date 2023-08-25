@@ -18,9 +18,9 @@ const Sprofile = ({user}) => {
       const uploadPic = () => {
         const data = new FormData();
         data.append("file", image);
-        data.append("upload_preset", "voting");
-        data.append("cloud_name", "dvfpkko1z");
-        fetch("https://api.cloudinary.com/v1_1/dvfpkko1z/image/upload", {
+        data.append("upload_preset", "ml_default");
+        data.append("cloud_name", "ddmazm72b");
+        fetch("https://api.cloudinary.com/v1_1/ddmazm72b/image/upload", {
           method: "post",
           body: data,
         })
@@ -46,11 +46,11 @@ const Sprofile = ({user}) => {
       };
 
     return (
-        <div className='card' style={{width:"40%",margin:"auto"}}>
+        <div className='card' style={{width:"50vw",padding:"15px",borderRadius:"10px",margin:"10px auto"}}>
             {user && <>
                 <div >
-                    <div style={{marginLeft:"34%",marginBottom:"20px"}}>
-                    <img src={ user[0].pic} alt="mahen"  style={{height:"200px",width:"200px",borderRadius:"100px"}} />
+                    <div style={{margin: "10px", display: "flex",justifyContent: "center"}}>
+                    <img src={ user[0].pic} alt="image"  style={{height:"200px",width:"200px",borderRadius:"100px"}} />
                     </div>
                    <Link to="/student/dashboard/edit" className='edit_profile'>    <i className="far fa-edit fa-2x"></i> </Link>
                

@@ -93,7 +93,7 @@ const handleRequest = ()=> {
               <th >Name</th>
               <th>Roll_No</th>
               <th>Addmision year</th>
-              <th>Attendance</th>
+              <th>Upload</th>
           </tr>
         </thead>
 
@@ -199,7 +199,6 @@ const handleRequest = ()=> {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
         </>
