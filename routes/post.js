@@ -6,13 +6,7 @@ const sendGridTransport = require("nodemailer-sendgrid-transport");
 const requireLogin  = require('../middleware/requireLogin')
 const Post =  mongoose.model("Post")
 
-const transporter = nodemailer.createTransport(
-    sendGridTransport({
-      auth: {
-        api_key: "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",
-      },
-    })
-  );
+
   
 router.get('/allpost',(req,res)=>{
     Post.find()
@@ -73,16 +67,7 @@ router.put('/vote',requireLogin,(req,res)=>{
     }).exec((err,result)=>{
         if(err){
             return res.status(422).json({error:err})
-        }else{
-            transporter.sendMail({
-                to: "makskks@gmail.com",
-                from: "mahenmondal111@gmail.com",
-                subject: "E-voting ", 
-                html: `
-                <h3>,You has given your vote successfully to ${result.title}  </h3>
-                `,
-              });
-            
+        }else{   
             res.json(result)
         }
     })

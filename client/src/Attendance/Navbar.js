@@ -14,12 +14,12 @@ const NavBar = ()=>{
         history.push('/signin')
     }
     return(
-        <nav className='navbar navbar-dark bg-success'>
+        <nav className='navbar navbar-dark' style={{backgroundColor:'#CBD4C2'}}>
         <div className="nav-wrapper blue" style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
            
            <div >
            <Link to={""} className="brand-logo center" 
-          style={{color:"white",fontSize:"30px",textDecoration:"none",fontFamily:"Acme",marginLeft:"20px"}}>Student Portal</Link>
+          style={{color:"black",fontSize:"30px",textDecoration:"none",fontFamily:"Acme",marginLeft:"20px"}}>Student Portal</Link>
            </div>
            {/* <div style={{marginLeft:"60px"}}>
                 {currentUser !== null && <><button  onClick={()=> logoutUserProfile()} >logout</button></>}

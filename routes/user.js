@@ -2,20 +2,12 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const User = mongoose.model("User")
-const nodemailer = require("nodemailer");
-const sendGridTransport = require("nodemailer-sendgrid-transport");
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const {JWT_SECRET} = require('../keys')
 const requireLogin = require('../middleware/requireLogin')
 
-const transporter = nodemailer.createTransport(
-    sendGridTransport({
-      auth: {
-        api_key: "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",
-      },
-    })
-  );
+
   
 router.post('/signup',(req,res)=>{
    const {firstname,lastname,stateName,email,password,pic,mobile,city,branch} = req.body 
@@ -39,13 +31,6 @@ router.post('/signup',(req,res)=>{
     
             user.save()
             .then(user=>{
-                transporter.sendMail({
-                    from: "mahenmondal111@gmail.com", // sender address
-                    to: user.email, // list of receivers
-                    subject: "E-voting Registration", // Subject line
-                    html:
-                      " You sucessfully complete Your  registration for E-voting.", // html body
-                  });
                 res.json({message:"saved successfully"})
             })
             .catch(err=>{
