@@ -47,14 +47,14 @@ export const loginUser = (user,type) => async dispatch => {
    
     try {
         var  res
-        if(type == "Student" || type == "Admin") {
-             if(type == "Student" && user.email == 'admin@gmail.com'){
-                return ;
-             }
+        if(type == "Student" ){
           res =  await axios.post("http://localhost:5000/StuSign", user);
           console.log(res) 
-        } else {
+        } else if(type == "Teacher"){
             res = await axios.post("http://localhost:5000/TecSign", user);
+        }
+        else{
+            res = await axios.post("http://localhost:5000/adminSign",user);
         }
         
         
