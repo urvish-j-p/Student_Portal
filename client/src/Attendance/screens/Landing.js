@@ -14,7 +14,7 @@ const Landing = () => {
          
             <div className=" m-auto" style={{display:"flex",width:"100%",height:"300px",justifyContent:"center" }}>
 
-            {/* <Link className="link_class" to="/adminlogin" style={{textDecoration:"none",fontFamily:"Oswald",color:"black",textAlign:"center"}}>
+            <Link className="link_class" to="/adminlogin" style={{textDecoration:"none",fontFamily:"Oswald",color:"black",textAlign:"center"}}>
 
                 <div className="card" >
                    <img src={AdminIMage} alt="StudentIMage" style={{height:"250px",width:"250px", border:"2px solid black"}} />
@@ -22,7 +22,7 @@ const Landing = () => {
                     <h3>Signin as  Admin</h3>
                 </div>
 
-                </Link> */}
+                </Link>
 
                 <Link className="link_class" to="/stulogin" style={{textDecoration:"none",fontFamily:"Oswald",color:"black",textAlign:"center"}}>
          
